@@ -1,0 +1,14 @@
+# 忽略Java编译文件
+*.class
+*.jar
+*.war
+*.ear
+
+# 忽略IDE配置（可选，按你的需求保留）
+.idea/
+.vscode/
+*.iml
+
+# 忽略系统/日志文件
+*.log
+*.tmp
