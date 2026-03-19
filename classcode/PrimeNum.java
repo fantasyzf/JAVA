@@ -3,7 +3,7 @@ public class PrimeNum{
 
         //输出100以内的素数
 
-        for(int i = 0; i <= 100; i++){
+        for(int i = 2; i <= 100; i++){
             //打印素数
             if(IsPrime(i)){
                 System.out.printf("%d ", i);
@@ -14,13 +14,7 @@ public class PrimeNum{
     //判断素数
     public static boolean IsPrime(int n){
 
-        //排除0和1
-        if(n == 0 || n == 1){
-           return false;
-        }
-
-
-        for(int i = 2; i < n; i++){
+        for(int i = 2; i < n / 2; i++){
             if(n % i == 0)
                return false;
         }
@@ -29,3 +23,8 @@ public class PrimeNum{
     }
 
 }
+
+
+//1.true写错
+//2.false写错
+//3.IsPrime不能写在main方法里
