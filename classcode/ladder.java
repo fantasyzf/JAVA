@@ -37,3 +37,5 @@ public class ladder{
 
     }
 }
+
+//1.文件名为ladder.java,public累名也为ladder这样可以,但是普通类为Ladder不行,因为windows读取的时候public类的时候不区分大小写
