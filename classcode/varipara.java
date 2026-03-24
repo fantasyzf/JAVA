@@ -1,4 +1,4 @@
-//来自豆包
+//豆包指导
 import java.util.Scanner;
 
 //工具类
@@ -18,7 +18,7 @@ class GetSum{
 }
 
 //主类
-public class 可变参数{
+public class varipara{
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
