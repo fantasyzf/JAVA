@@ -18,14 +18,19 @@ public class MaxPrime {
     }
     //素数判断
     boolean isPrime(int num) {
+        //1.若为偶数则不是素数
         if (num % 2 == 0) {
             return false;
         }
+
+        //2.若为奇数则判断是否能被其他奇数整除
         for (int i = 3; i <= Math.sqrt(num); i += 2) {
             if (num % i == 0) {
                 return false;
             }
         }
+
+        //3.都不是则为素数
         return true;
     }
 }
