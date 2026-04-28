@@ -26,7 +26,7 @@ public class work1 {
         int[] count = new int[26];// 数组长度为26,下标是0-25
 
         // 4.遍历输入的字符串,统计字母出现次数
-        for (int i = 0; i < input.length(); i++) {
+        for (int i = 0; i < input.length(); i++) {// input.length()这里也可以用lowerInput.length
             char c = lowerInput.charAt(i);// 返回index为i对应的字符
 
             // 判断字母
@@ -50,6 +50,7 @@ public class work1 {
 
 /*
  * 1. System.in漏写
- * 2.String类 方法:>input.toLowerCase()转换的大小写
+ * 2.不熟悉String类中方法:>input.toLowerCase()转换的大小写,其中L为大写
  * 3.i < input.length()不用-1,是小于号
+ * 4.非字母字符（数字、标点、空格）在 toLowerCase 后保持原样，长度不变.
  */

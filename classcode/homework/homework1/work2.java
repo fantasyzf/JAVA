@@ -1,4 +1,3 @@
-package homework.homework1;
 
 public class work2 {
     public static void main(String[] args) {
@@ -16,11 +15,34 @@ public class work2 {
          * 请编程推算一下，他当时到底有多大。
          */
 
-        // 1.年龄的大致范围是10~30
+        System.out.print("可推测出他的年龄是:>");
         for (int age = 10; age <= 30; age++) {
-            // 立方和4次方
+            // 1.计算立方和4次方
             long cube = (long) Math.pow(age, 3);
             long fourthpower = (long) Math.pow(age, 4);
+
+            // 2.是否符合条件一和条件二的要求
+            // boolean result = (1000 <= cube && cube <= 9999) && (100000 <= fourthpower &&
+            // fourthpower <= 999999);
+            if (1000 > cube || cube > 9999)// 不符合条件一就跳过
+                continue;
+            if (100000 > fourthpower || fourthpower > 999999)// 不符合条件二就跳过
+                continue;
+
+            // 3.拼接立方和四次方,检查条件三
+            String stringsum = String.valueOf(cube) + String.valueOf(fourthpower);
+            // 调用类方法
+            if (NumberUtils.isTrue(stringsum)) {
+                System.out.println(age);
+            }
         }
     }
 }
+
+/*
+ * 1.解决问题前预测大致范围for (int age = 10; age <= 30; age++)
+ * 2. if (1000 > cube || cube > 9999) continue;不会运用continue
+ * 3.String stringsum = String.valueOf(cube) +
+ * String.valueOf(fourthpower);不会拼接两个字符串
+ * 4.不会处理VScode包语句报错
+ */
